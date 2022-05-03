@@ -1,0 +1,86 @@
+#project_list{
+    display: grid;
+    grid-template-columns: repeat(4,318px);
+    list-style: none;
+    gap: 10px;
+    & > li{
+        border: 1px solid rgba(168,179,207,0.2);
+        background-color: #1C1F26;
+        height: 344px;
+        border-radius: 10px;
+        padding: 21px 25px;
+        position: relative;
+        h3{
+            word-break: break-word;
+            font: 22px/30px sans-serif;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+           
+        }
+        img{
+            width: 100%;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        p{
+            word-break: break-word;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            
+        }
+        .tags{
+            display: flex;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+            & > li{
+                background: #fff;
+                color: #0E1217;
+                list-style: none;
+                margin: 10px 10px 0 0;
+                padding: 4px 10px;
+                border-radius: 10px;
+                font: 14px/18px sans-serif;
+            }
+        }
+        .links {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            justify-content: space-between;
+            position: absolute;
+            bottom: 16px;
+            width: 83%;
+            & > li{
+                list-style: none;
+                position: relative;
+                &::before{
+                    content: "";
+                    display: inline-block;
+                    background-color:#2196f3;
+                    height: 2px;
+                    width: 0;
+                    position: absolute;
+                    bottom: 0;
+                    transition: width .5s;
+                }
+                &:hover{
+                    &::before{
+                        width: 100%;
+                    }
+                }
+                a{
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+        &:hover{
+            border: 1px solid rgba(168,179,207,0.4);
+        }
+    }
+}
