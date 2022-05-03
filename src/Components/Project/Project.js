@@ -1,5 +1,5 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Tooltip from '@mui/material/Tooltip';
 import "../../scss/Projects.scss";
 
